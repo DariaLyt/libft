@@ -6,7 +6,7 @@
 /*   By: dlytvync <dlytvync@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 15:12:51 by dlytvync          #+#    #+#             */
-/*   Updated: 2025/04/18 16:32:47 by dlytvync         ###   ########.fr       */
+/*   Updated: 2025/04/21 10:52:34 by dlytvync         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <bsd/string.h>
 #include <ctype.h>
+#include <string.h>
 
 char test_func(unsigned int i, char c)
 {
@@ -342,10 +343,33 @@ int main()
 	printf("ft_strmapi:\t\t[%s]\n", ft_strmapi(input, &test_func));
 	printf("------------------------------------------------------------------------------------\n");
 
-	input = "abcdefghijklmnopqrstuvwxyz";
-	printf("input:\t\t\t[%s]\n", input);
-	ft_striteri(input, test_func1);
-	printf("ft_striteri:\t\t[%s]\n", input);
+	char	input1[] = "zyxwvutsrqponmlkjihgfedcba";
+	printf("input:\t\t\t[%s]\n", input1);
+	ft_striteri(input1, test_func1);
+	printf("ft_striteri:\t\t[%s]\n", input1);
 	printf("------------------------------------------------------------------------------------\n");
+	printf("ft_putchar_fd('A', 1):\n");
+	ft_putchar_fd('A', 1);
+	printf("\nft_putchar_fd('+', 1):\n");
+	ft_putchar_fd('+', 1);
+
+	printf("\n------------------------------------------------------------------------------------\n");
+
+	printf("ft_putstr_fd('Hello', 1):\n");
+	ft_putstr_fd("Hello", 1);
+	printf("\nft_putstr_fd('Testing ft_putstr', 1):\n");
+	ft_putstr_fd("Testing ft_putstr", 1);
+
+	printf("\n------------------------------------------------------------------------------------\n");
+	printf("ft_putendl_fd('Hello', 1):\n");
+	ft_putendl_fd("Hello", 1);
+	printf("\nft_putendl_fd('Test123', 1):\n");
+	ft_putendl_fd("Test123", 1);
+	printf("------------------------------------------------------------------------------------\n");
+	printf("ft_putnbr_fd(123456, 1):\n");
+	ft_putnbr_fd(123456, 1);
+	printf("\nft_putnbr_fd(999999999, 1):\n");
+	ft_putnbr_fd(999999999, 1);
+	printf("\n");
 	return 0;
 }
