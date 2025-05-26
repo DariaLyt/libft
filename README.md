@@ -47,7 +47,7 @@ Libft is an independent implementation of essential C library functions, first p
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/pmarkaide/42_libft.git](https://github.com/DariaLyt/libft.git
+git clone https://github.com/DariaLyt/libft.git
 cd libft
 
 # Build the library
